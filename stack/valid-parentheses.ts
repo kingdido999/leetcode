@@ -1,10 +1,5 @@
-/**
- * @param {string} s containing just the characters '(', ')', '{', '}', '[' and ']'
- * @return {boolean} true if:
- * 1. Open brackets must be closed by the same type of brackets.
- * 2. Open brackets must be closed in the correct order.
- */
-var isValid = function(s) {
+// https://leetcode.com/problems/valid-parentheses/
+function isValid(s: string): boolean {
   if (s.length % 2 === 1) {
     // Odd number of brackets must not be valid
     return false;
@@ -31,9 +26,9 @@ var isValid = function(s) {
 
   // If all brackets match, then there must not be open brackets left
   return stack.length === 0;
-};
+}
 
-function isOpenBracket(bracket) {
+function isOpenBracket(bracket: string) {
   return ["(", "{", "["].includes(bracket);
 }
 
@@ -43,6 +38,6 @@ const bracketMap = {
   "[": "]"
 };
 
-function isBracketPair(open, close) {
+function isBracketPair(open: string, close: string) {
   return bracketMap[open] === close;
 }

@@ -1,10 +1,5 @@
-/**
- * https://leetcode.com/problems/permutation-in-string/
- * @param {string} s1
- * @param {string} s2
- * @return {boolean} true if s2 contains a permutation of s1
- */
-var checkInclusion = function(s1, s2) {
+ // https://leetcode.com/problems/permutation-in-string/
+function checkInclusion(s1: string, s2: string): boolean {
   if (s1.length > s2.length) {
     // s2 must not be a permutation of s1 if s2 is longer than s1
     return false;
@@ -43,14 +38,14 @@ var checkInclusion = function(s1, s2) {
   }
 
   return matches(s1Count, s2Count);
-};
-
-function charToIndex(char) {
-  // 'a'.charCodeAt() === 97
-  return char.charCodeAt() - 97;
 }
 
-function matches(s1Count, s2Count) {
+function charToIndex(char: string): number {
+  // 'a'.charCodeAt() === 97
+  return char.charCodeAt(0) - 97;
+}
+
+function matches(s1Count: number[], s2Count: number[]) {
   for (let i = 0; i < 26; i++) {
     if (s1Count[i] !== s2Count[i]) {
       return false;
