@@ -1,9 +1,5 @@
 // https://leetcode.com/problems/invert-binary-tree/
-interface TreeNode {
-  val: number
-  left: TreeNode | null
-  right: TreeNode | null
-}
+import TreeNode from './domain/tree-node'
 
 function invertTree(root: TreeNode | null): TreeNode | null {
   if (root === null) {

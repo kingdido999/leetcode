@@ -1,7 +1,4 @@
- class ListNode {
-  val: number
-  next: ListNode | null
- }
+import ListNode from './domain/list-node'
 
 /**
  Do not return anything, modify head in-place instead.

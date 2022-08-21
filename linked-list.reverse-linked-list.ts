@@ -1,8 +1,5 @@
 // https://leetcode.com/problems/reverse-linked-list/
- interface ListNode {
-  val: number
-  next: ListNode | null
- }
+import ListNode from './domain/list-node'
 
 function reverseList(head: ListNode | null): ListNode | null {
   if (head === null) {

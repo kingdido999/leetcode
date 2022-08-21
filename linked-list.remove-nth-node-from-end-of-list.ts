@@ -1,8 +1,5 @@
 // https://leetcode.com/problems/remove-nth-node-from-end-of-list/
-  class ListNode {
-      val: number
-      next: ListNode | null
-  }
+import ListNode from './domain/list-node'
 
 function removeNthFromEnd(head: ListNode | null, n: number): ListNode | null {
   if (head === null) {

@@ -1,8 +1,5 @@
 // https://leetcode.com/problems/linked-list-cycle/
-class ListNode {
-  val: number
-  next: ListNode
-}
+import ListNode from './domain/list-node'
 
 function hasCycle(head: ListNode | null): boolean {
   if (head === null) {

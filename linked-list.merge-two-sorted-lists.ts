@@ -1,8 +1,5 @@
 // https://leetcode.com/problems/merge-two-sorted-lists/
-class ListNode {
-  val: number
-  next: ListNode | null
- }
+import ListNode from './domain/list-node'
 
 function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
   let head = new ListNode()
