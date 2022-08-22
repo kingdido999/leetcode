@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/same-tree/
 import TreeNode from './domain/tree-node'
 
-function isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {
+export default function isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {
   if (p === null && q === null) {
     return true
   }
