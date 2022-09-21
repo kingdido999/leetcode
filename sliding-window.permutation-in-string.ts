@@ -1,4 +1,6 @@
- // https://leetcode.com/problems/permutation-in-string/
+import { charToIndex } from "./utils/index";
+
+// https://leetcode.com/problems/permutation-in-string/
 function checkInclusion(s1: string, s2: string): boolean {
   if (s1.length > s2.length) {
     // s2 must not be a permutation of s1 if s2 is longer than s1
@@ -38,11 +40,6 @@ function checkInclusion(s1: string, s2: string): boolean {
   }
 
   return matches(s1Count, s2Count);
-}
-
-function charToIndex(char: string): number {
-  // 'a'.charCodeAt() === 97
-  return char.charCodeAt(0) - 97;
 }
 
 function matches(s1Count: number[], s2Count: number[]) {
