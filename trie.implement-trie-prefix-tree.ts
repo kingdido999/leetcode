@@ -1,14 +1,7 @@
+import TrieNode from "./domain/trie-node";
+import { charToIndex } from "./utils/index";
+
 // https://leetcode.com/problems/implement-trie-prefix-tree/
-class TrieNode {
-  endOfWord: boolean;
-  children: TrieNode[];
-
-  constructor() {
-    this.endOfWord = false;
-    this.children = [];
-  }
-}
-
 class Trie {
   private root: TrieNode;
 
@@ -56,11 +49,6 @@ class Trie {
 
     return node;
   }
-}
-
-function charToIndex(char: string): number {
-  // 'a'.charCodeAt() === 97
-  return char.charCodeAt(0) - 97;
 }
 
 /**
